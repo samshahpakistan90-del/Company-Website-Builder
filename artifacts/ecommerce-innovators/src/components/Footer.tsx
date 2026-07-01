@@ -1,4 +1,6 @@
-import { Rocket, Linkedin, Mail, Twitter } from 'lucide-react';
+import { Linkedin, Mail, Twitter } from 'lucide-react';
+
+const LOGO_URL = "https://i.postimg.cc/q7NxGncY/Whats-App-Image-2026-06-29-at-00-46-24.jpg";
 import { Button } from '@/components/ui/button';
 
 export default function Footer() {
@@ -15,9 +17,18 @@ export default function Footer() {
           {/* Brand Col */}
           <div className="lg:col-span-2">
             <div className="flex items-center gap-2 mb-6">
-              <div className="w-10 h-10 rounded-lg bg-primary flex items-center justify-center text-background">
-                <Rocket className="w-6 h-6" />
-              </div>
+              <img
+                src={LOGO_URL}
+                alt="Ecommerce Innovators Logo"
+                className="w-10 h-10 rounded-lg object-cover"
+                onError={(e) => {
+                  const target = e.currentTarget;
+                  target.style.display = 'none';
+                  const fallback = target.nextElementSibling as HTMLElement;
+                  if (fallback) fallback.style.display = 'flex';
+                }}
+              />
+              <div className="w-10 h-10 rounded-lg bg-primary items-center justify-center text-background text-sm font-bold hidden">EI</div>
               <span className="font-heading font-bold text-xl tracking-tight text-white">
                 Ecommerce Innovators
               </span>
