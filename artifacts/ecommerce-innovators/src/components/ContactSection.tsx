@@ -1,34 +1,53 @@
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import { motion } from 'framer-motion';
 import { MapPin, Mail, Phone, Linkedin, Send } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useToast } from '@/hooks/use-toast';
+import emailjs from '@emailjs/browser';
+
+const EMAILJS_SERVICE_ID  = 'service_z5w58j2';
+const EMAILJS_TEMPLATE_ID = 'template_hne4jzk';
+const EMAILJS_PUBLIC_KEY  = 'VAUV9nBjHfb7Z2g3O';
 
 export default function ContactSection() {
   const { toast } = useToast();
+  const formRef = useRef<HTMLFormElement>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    if (!formRef.current) return;
+
     setIsSubmitting(true);
-    
-    // Simulate API call
-    setTimeout(() => {
-      setIsSubmitting(false);
+    try {
+      await emailjs.sendForm(
+        EMAILJS_SERVICE_ID,
+        EMAILJS_TEMPLATE_ID,
+        formRef.current,
+        EMAILJS_PUBLIC_KEY,
+      );
       toast({
         title: "Consultation Request Sent!",
         description: "We'll be in touch within 24 hours.",
-        variant: "default",
       });
-      (e.target as HTMLFormElement).reset();
-    }, 1500);
+      formRef.current.reset();
+    } catch (err) {
+      console.error('EmailJS error:', err);
+      toast({
+        title: "Something went wrong",
+        description: "Please try again or email us directly.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
     <section id="contact" className="py-24 lg:py-32 relative">
       <div className="container mx-auto px-6 max-w-7xl">
         <div className="grid lg:grid-cols-2 gap-16">
-          
+
           {/* Left: Contact Info */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
@@ -100,53 +119,92 @@ export default function ContactSection() {
             transition={{ duration: 0.5 }}
             className="glass-card rounded-2xl p-8"
           >
-            <form onSubmit={handleSubmit} className="space-y-6">
+            <form ref={formRef} onSubmit={handleSubmit} className="space-y-6">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div className="space-y-2">
                   <label className="text-sm font-bold text-white">Full Name *</label>
-                  <input required type="text" className="w-full bg-black/20 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-primary transition-colors" placeholder="John Doe" />
+                  <input
+                    required
+                    type="text"
+                    name="from_name"
+                    className="w-full bg-black/20 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-primary transition-colors"
+                    placeholder="John Doe"
+                  />
                 </div>
                 <div className="space-y-2">
                   <label className="text-sm font-bold text-white">Company Name *</label>
-                  <input required type="text" className="w-full bg-black/20 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-primary transition-colors" placeholder="Acme Corp" />
+                  <input
+                    required
+                    type="text"
+                    name="company_name"
+                    className="w-full bg-black/20 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-primary transition-colors"
+                    placeholder="Acme Corp"
+                  />
                 </div>
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div className="space-y-2">
                   <label className="text-sm font-bold text-white">Email Address *</label>
-                  <input required type="email" className="w-full bg-black/20 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-primary transition-colors" placeholder="john@example.com" />
+                  <input
+                    required
+                    type="email"
+                    name="reply_to"
+                    className="w-full bg-black/20 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-primary transition-colors"
+                    placeholder="john@example.com"
+                  />
                 </div>
                 <div className="space-y-2">
                   <label className="text-sm font-bold text-white">Phone Number</label>
-                  <input type="tel" className="w-full bg-black/20 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-primary transition-colors" placeholder="+1 (555) 000-0000" />
+                  <input
+                    type="tel"
+                    name="phone_number"
+                    className="w-full bg-black/20 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-primary transition-colors"
+                    placeholder="+1 (555) 000-0000"
+                  />
                 </div>
               </div>
 
               <div className="space-y-2">
                 <label className="text-sm font-bold text-white">Amazon Store URL (if active)</label>
-                <input type="url" className="w-full bg-black/20 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-primary transition-colors" placeholder="https://amazon.com/..." />
+                <input
+                  type="url"
+                  name="store_url"
+                  className="w-full bg-black/20 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-primary transition-colors"
+                  placeholder="https://amazon.com/..."
+                />
               </div>
 
               <div className="space-y-2">
                 <label className="text-sm font-bold text-white">Services Needed *</label>
-                <select required defaultValue="" className="w-full bg-black/20 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-primary transition-colors appearance-none cursor-pointer">
+                <select
+                  required
+                  defaultValue=""
+                  name="service_needed"
+                  className="w-full bg-black/20 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-primary transition-colors appearance-none cursor-pointer"
+                >
                   <option value="" disabled>Select a primary service</option>
-                  <option value="full">Full Account Management</option>
-                  <option value="ppc">PPC Advertising</option>
-                  <option value="listing">Listing Optimization / A+ Content</option>
-                  <option value="launch">New Product Launch</option>
-                  <option value="other">Other / Consulting</option>
+                  <option value="Full Account Management">Full Account Management</option>
+                  <option value="PPC Advertising">PPC Advertising</option>
+                  <option value="Listing Optimization / A+ Content">Listing Optimization / A+ Content</option>
+                  <option value="New Product Launch">New Product Launch</option>
+                  <option value="Other / Consulting">Other / Consulting</option>
                 </select>
               </div>
 
               <div className="space-y-2">
                 <label className="text-sm font-bold text-white">How can we help? *</label>
-                <textarea required rows={4} className="w-full bg-black/20 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-primary transition-colors resize-none" placeholder="Tell us about your current challenges and goals..." />
+                <textarea
+                  required
+                  rows={4}
+                  name="message"
+                  className="w-full bg-black/20 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-primary transition-colors resize-none"
+                  placeholder="Tell us about your current challenges and goals..."
+                />
               </div>
 
-              <Button 
-                type="submit" 
+              <Button
+                type="submit"
                 disabled={isSubmitting}
                 className="w-full bg-primary text-primary-foreground hover:bg-primary/90 text-lg h-14"
               >
