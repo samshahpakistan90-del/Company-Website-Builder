@@ -1,11 +1,13 @@
 import { useEffect, useRef, useState } from 'react';
 import { motion, useInView } from 'framer-motion';
+import { Clock } from 'lucide-react';
 
 const stats = [
   { value: 7, label: "Years Experience", suffix: "+" },
   { value: 100, label: "Brands Managed", suffix: "+" },
-  { value: 50, label: "Revenue Generated", prefix: "$", suffix: "M+" },
-  { value: 98, label: "Client Satisfaction", suffix: "%" }
+  { value: 500, label: "Revenue Generated", prefix: "$", suffix: "M+" },
+  { value: 98, label: "Client Satisfaction", suffix: "%" },
+  { value: 24, label: "Account Support", suffix: "/7", icon: true },
 ];
 
 function Counter({ from, to, duration = 2, prefix = "", suffix = "" }: { from: number, to: number, duration?: number, prefix?: string, suffix?: string }) {
@@ -22,10 +24,7 @@ function Counter({ from, to, duration = 2, prefix = "", suffix = "" }: { from: n
     const animate = (timestamp: number) => {
       if (!startTime) startTime = timestamp;
       const progress = Math.min((timestamp - startTime) / (duration * 1000), 1);
-      
-      // Easing function (easeOutQuart)
       const easeProgress = 1 - Math.pow(1 - progress, 4);
-      
       setCount(Math.floor(from + (to - from) * easeProgress));
 
       if (progress < 1) {
@@ -34,7 +33,6 @@ function Counter({ from, to, duration = 2, prefix = "", suffix = "" }: { from: n
     };
 
     animationFrame = requestAnimationFrame(animate);
-
     return () => cancelAnimationFrame(animationFrame);
   }, [isInView, from, to, duration]);
 
@@ -49,22 +47,30 @@ export default function StatsBar() {
   return (
     <div className="container mx-auto px-6 max-w-7xl mt-20 relative z-20">
       <div className="glass rounded-2xl p-8 border-white/10 relative overflow-hidden">
-        {/* Subtle glow inside the bar */}
         <div className="absolute inset-0 bg-gradient-to-r from-primary/5 via-transparent to-secondary/10" />
-        
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 relative z-10">
+
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 relative z-10">
           {stats.map((stat, index) => (
-            <motion.div 
+            <motion.div
               key={index}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1, duration: 0.5 }}
-              className="text-center flex flex-col items-center justify-center border-r border-white/5 last:border-r-0"
+              className="text-center flex flex-col items-center justify-center border-r border-white/5 last:border-r-0 px-2"
             >
-              <div className="text-4xl lg:text-5xl font-bold text-white mb-2 tracking-tight">
-                <Counter from={0} to={stat.value} prefix={stat.prefix} suffix={stat.suffix} />
-              </div>
+              {stat.icon ? (
+                <div className="flex items-center gap-1 text-4xl lg:text-5xl font-bold mb-2 tracking-tight">
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-primary font-mono">
+                    {stat.value}{stat.suffix}
+                  </span>
+                  <Clock className="w-6 h-6 text-primary ml-1 inline-block" />
+                </div>
+              ) : (
+                <div className="text-4xl lg:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-white to-primary mb-2 tracking-tight">
+                  <Counter from={0} to={stat.value} prefix={stat.prefix} suffix={stat.suffix} />
+                </div>
+              )}
               <div className="text-sm font-medium text-foreground/60 uppercase tracking-wider">
                 {stat.label}
               </div>
