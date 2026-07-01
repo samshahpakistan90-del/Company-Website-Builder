@@ -6,7 +6,7 @@ import {
 
 const features = [
   { icon: LineChart, title: "Customized Strategies", desc: "No templates. We build bespoke plans based on your product lifecycle." },
-  { icon: Clock, title: "7+ Years Experience", desc: "Battle-tested knowledge across hundreds of categories." },
+  { icon: Clock, title: "Proven Track Record", desc: "Battle-tested knowledge and consistent results across hundreds of categories." },
   { icon: MessageSquare, title: "Transparent Communication", desc: "Direct access to your account manager. No black boxes." },
   { icon: Database, title: "Data-Driven Decisions", desc: "Every bid, keyword, and design choice is backed by data." },
   { icon: Palette, title: "Creative Excellence", desc: "World-class design that elevates your brand perception." },

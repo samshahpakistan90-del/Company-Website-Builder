@@ -5,7 +5,7 @@ const team = [
   {
     name: "Syed Sami",
     role: "Chief Executive Officer",
-    desc: "Visionary leader with 7+ years scaling Amazon brands globally.",
+    desc: "Visionary leader scaling Amazon brands globally with proven expertise.",
     initials: "SS",
     image: "https://i.postimg.cc/Dfpsxm08/Gemini-Generated-Image-nazbyznazbyznazb.png"
   },
