@@ -3,8 +3,7 @@ import { motion, useInView } from 'framer-motion';
 import { Clock } from 'lucide-react';
 
 const stats = [
-  { value: 7, label: "Years Experience", suffix: "+" },
-  { value: 100, label: "Brands Managed", suffix: "+" },
+  { value: 250, label: "Brands Managed", suffix: "+" },
   { value: 500, label: "Revenue Generated", prefix: "$", suffix: "M+" },
   { value: 98, label: "Client Satisfaction", suffix: "%" },
   { value: 24, label: "Account Support", suffix: "/7", icon: true },
@@ -49,7 +48,7 @@ export default function StatsBar() {
       <div className="glass rounded-2xl p-8 border-white/10 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-primary/5 via-transparent to-secondary/10" />
 
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 relative z-10">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 relative z-10">
           {stats.map((stat, index) => (
             <motion.div
               key={index}
