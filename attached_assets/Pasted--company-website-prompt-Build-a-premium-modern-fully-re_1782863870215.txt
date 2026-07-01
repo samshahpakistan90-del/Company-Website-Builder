@@ -1,0 +1,680 @@
+<company_website_prompt>
+
+Build a premium, modern, fully responsive company website for an Amazon growth agency named Ecommerce Innovators.
+
+This is not a typical marketing agency website.
+
+The design should feel comparable to Stripe, Vercel, Linear, Clay, Ramp, and Deel—clean, premium, modern, minimal, and enterprise-level.
+
+The primary objective is to establish trust, authority, professionalism, and generate consultation requests from Amazon sellers and brands.
+
+Do not use generic templates.
+
+Create a unique design with premium spacing, beautiful typography, subtle animations, elegant gradients, and an exceptional user experience.
+
+────────────────────────
+COMPANY INFORMATION
+────────────────────────
+
+Company Name:
+Ecommerce Innovators
+
+Description:
+
+Ecommerce Innovators is a results-driven Amazon growth agency helping brands launch, scale, and dominate Amazon through data-driven strategies, marketplace expertise, and creative execution.
+
+We specialize in Amazon PPC, Listing Optimization, Brand Growth, Storefront Design, Product Launches, Account Management, A+ Content, Creative Assets, and Full-Service Amazon Consulting.
+
+Our mission is to become an extension of every client's business and deliver measurable, long-term growth.
+
+────────────────────────
+MISSION
+────────────────────────
+
+To empower brands with innovative Amazon growth strategies that maximize profitability and build sustainable long-term success.
+
+────────────────────────
+VISION
+────────────────────────
+
+To become a globally recognized Amazon growth partner trusted by ambitious brands worldwide.
+
+────────────────────────
+CORE VALUES
+────────────────────────
+
+• Client Success First
+• Innovation
+• Integrity
+• Transparency
+• Excellence
+• Data-Driven Decisions
+• Collaboration
+• Long-Term Partnership
+
+────────────────────────
+DESIGN STYLE
+────────────────────────
+
+The website should look luxurious, premium, modern and technology-focused.
+
+Theme:
+Dark
+
+Primary Color:
+Deep Navy (#081A3A)
+
+Secondary:
+Royal Blue (#0D47A1)
+
+Accent:
+Gold (#F5A623)
+
+Neutral:
+White
+
+Supporting:
+Silver (#C7CEDB)
+
+Typography
+
+Headings:
+Plus Jakarta Sans
+
+Body:
+Inter
+
+Statistics:
+Space Grotesk
+
+Rounded corners
+
+Large spacing
+
+Premium cards
+
+Soft shadows
+
+Beautiful gradients
+
+Minimalistic icons
+
+High-quality illustrations
+
+Glassmorphism only where appropriate.
+
+────────────────────────
+ANIMATIONS
+────────────────────────
+
+Use premium animations throughout.
+
+• Hero fade-up
+• Text reveal
+• Mouse parallax
+• Scroll animations
+• Card hover
+• Animated counters
+• Timeline animation
+• Testimonial carousel
+• Logo slider
+• Smooth transitions
+• Sticky navigation
+• Button hover effects
+• FAQ accordion
+• Floating contact button
+• Back-to-top button
+
+Animations should feel elegant and smooth.
+
+────────────────────────
+NAVIGATION
+────────────────────────
+
+Sticky navigation
+
+Logo left
+
+Menu center
+
+CTA button right
+
+Menu
+
+Home
+
+About
+
+Services
+
+Process
+
+Case Studies
+
+Team
+
+Testimonials
+
+Contact
+
+CTA
+
+Book Free Consultation
+
+────────────────────────
+HERO SECTION
+────────────────────────
+
+Large modern hero.
+
+Left Side
+
+Headline
+
+Grow Your Amazon Brand with Data-Driven Strategies That Deliver Real Results.
+
+Subheadline
+
+Helping brands launch, scale, and dominate Amazon through expert account management, advertising, creative optimization, and long-term growth strategies.
+
+Primary CTA
+
+Book Free Consultation
+
+Secondary CTA
+
+View Services
+
+Right Side
+
+Create a premium 3D dashboard illustration showing:
+
+Amazon sales analytics
+
+Revenue growth charts
+
+ROAS graphs
+
+PPC dashboard
+
+Keyword rankings
+
+Inventory analytics
+
+Use floating cards with subtle motion.
+
+Behind the hero include abstract blue gradient lighting.
+
+Below hero display animated statistics.
+
+7+
+
+Years Experience
+
+100+
+
+Brands Managed (Editable)
+
+Millions+
+
+Revenue Generated (Placeholder)
+
+98%
+
+Client Satisfaction (Editable)
+
+────────────────────────
+ABOUT SECTION
+────────────────────────
+
+Include company overview.
+
+Mission
+
+Vision
+
+Core Values
+
+Create a premium split layout.
+
+Left side
+
+Professional content.
+
+Right side
+
+Illustration or office imagery.
+
+────────────────────────
+SERVICES SECTION
+────────────────────────
+
+Create premium interactive service cards.
+
+Include:
+
+Amazon Account Management
+
+Amazon PPC Advertising
+
+Listing Creation
+
+Listing Optimization
+
+Amazon SEO
+
+Storefront Design
+
+A+ Content
+
+Brand Registry
+
+Product Launch
+
+Inventory Management
+
+Competitor Analysis
+
+Market Research
+
+Creative Design
+
+DSP Advertising
+
+Performance Reporting
+
+Growth Consulting
+
+Each service card should include
+
+Icon
+
+Description
+
+Hover animation
+
+Learn More button
+
+────────────────────────
+WHY CHOOSE US
+────────────────────────
+
+Highlight:
+
+Customized strategies
+
+7+ years experience
+
+Transparent communication
+
+Data-driven decisions
+
+Creative excellence
+
+Long-term growth
+
+Dedicated Amazon specialists
+
+Results-focused
+
+Animated feature cards.
+
+────────────────────────
+PROCESS SECTION
+────────────────────────
+
+Create a horizontal animated timeline.
+
+1 Discovery
+
+2 Strategy
+
+3 Implementation
+
+4 Optimization
+
+5 Reporting
+
+6 Scale
+
+Each step should have icon, title and short explanation.
+
+────────────────────────
+INDUSTRIES
+────────────────────────
+
+Grid layout.
+
+Beauty
+
+Health
+
+Home
+
+Kitchen
+
+Electronics
+
+Fashion
+
+Sports
+
+Baby
+
+Pet
+
+Automotive
+
+Food
+
+Supplements
+
+────────────────────────
+CASE STUDIES
+────────────────────────
+
+Create premium placeholder case study cards.
+
+Do NOT use fake data.
+
+Each card should display placeholders for:
+
+Client Industry
+
+Challenge
+
+Strategy
+
+Services Used
+
+Revenue Growth
+
+ROAS
+
+ACOS
+
+Organic Ranking
+
+Timeline
+
+Charts
+
+CTA
+
+View Full Case Study
+
+Beautiful dashboard-style design.
+
+────────────────────────
+TEAM
+────────────────────────
+
+Premium cards.
+
+Include
+
+Syed Sami
+Chief Executive Officer
+
+Hala Noor
+Brand Development Executive
+
+Asad
+Amazon Brand Strategist
+
+Ali Arshad
+PPC & Advertising Expert
+
+Usama
+Creative Designer
+
+Tayyab Sethi
+Listing Optimization Expert
+
+Hassan Kamran
+Operations & Supply Chain Specialist
+
+Each card should include:
+
+Photo placeholder
+
+Role
+
+Professional description
+
+LinkedIn icon placeholder
+
+Hover animation
+
+────────────────────────
+TESTIMONIALS
+────────────────────────
+
+Create a premium carousel.
+
+Auto sliding.
+
+Loop infinitely.
+
+Pause on hover.
+
+Cards should include:
+
+★★★★★
+
+Client Name
+
+Review
+
+Include these testimonials:
+
+Michael Anderson
+
+"Working with Ecommerce Innovators has been a game-changer for our business..."
+
+Sarah Mitchell
+
+"The PPC strategies implemented by Ecommerce Innovators delivered excellent ROAS..."
+
+David Carter
+
+"From product launches to account management they exceeded expectations..."
+
+Emily Johnson
+
+"Their listing optimization transformed our product pages..."
+
+James Wilson
+
+"We've worked with many agencies and Ecommerce Innovators stands out..."
+
+Busayo Olaivon
+
+"Ecommerce Innovators helped us scale with a clear strategy..."
+
+Jenny Pan
+
+"The professionalism exceeded expectations..."
+
+David
+
+"The team made managing Amazon effortless..."
+
+Marco
+
+"Choosing Ecommerce Innovators was one of our best business decisions..."
+
+Desktop:
+3 cards
+
+Tablet:
+2 cards
+
+Mobile:
+1 card
+
+────────────────────────
+FAQ
+────────────────────────
+
+Modern accordion.
+
+Questions including:
+
+Why choose Ecommerce Innovators?
+
+How long before results?
+
+Do you manage PPC?
+
+Do you optimize listings?
+
+Can you launch new products?
+
+How often do you provide reports?
+
+────────────────────────
+CONTACT
+────────────────────────
+
+Split layout.
+
+Left
+
+Headquarters
+New York, NY, USA
+
+Regional Office
+Jhelum, Punjab, Pakistan
+
+Email
+
+EcommerceInnovators@gmail.com
+
+Phone
+
++1 (641) 823-2545
+
+LinkedIn
+
+https://www.linkedin.com/company/ecommerce-innovators-co/
+
+Right
+
+Modern contact form.
+
+Fields
+
+Name
+
+Company
+
+Email
+
+Phone
+
+Amazon Store URL
+
+Services Needed
+
+Message
+
+CTA
+
+Book Free Consultation
+
+────────────────────────
+FOOTER
+────────────────────────
+
+Company logo
+
+Quick Links
+
+Services
+
+Contact
+
+Privacy Policy
+
+Terms
+
+Copyright
+
+Newsletter signup
+
+────────────────────────
+SEO
+────────────────────────
+
+Use semantic HTML.
+
+Proper heading hierarchy.
+
+Optimize for keywords:
+
+Amazon Agency
+
+Amazon PPC
+
+Amazon SEO
+
+Amazon Listing Optimization
+
+Amazon Growth
+
+Amazon Consulting
+
+Amazon Account Management
+
+Amazon Experts
+
+Generate clean URLs.
+
+Optimize Core Web Vitals.
+
+────────────────────────
+RESPONSIVE
+────────────────────────
+
+Fully responsive.
+
+Desktop
+
+Tablet
+
+Mobile
+
+Maintain premium spacing on all screen sizes.
+
+────────────────────────
+TECH STACK
+────────────────────────
+
+Use:
+
+React
+
+TypeScript
+
+Tailwind CSS
+
+Framer Motion
+
+Lucide Icons
+
+Shadcn/UI
+
+Reusable components
+
+Modern architecture
+
+Optimized performance
+
+────────────────────────
+FINAL REQUIREMENTS
+────────────────────────
+
+Create a website that immediately feels premium, trustworthy, and world-class. Every section should encourage users to book a free consultation. Use smooth animations, polished interactions, and a consistent design language inspired by top SaaS companies. Ensure the experience is fast, accessible, SEO-friendly, and visually impressive. Use the provided Ecommerce Innovators logo throughout the branding and maintain the navy, blue, gold, white, and silver color palette consistently.
+
+</company_website_prompt>

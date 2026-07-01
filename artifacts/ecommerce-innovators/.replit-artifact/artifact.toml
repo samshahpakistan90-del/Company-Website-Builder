@@ -1,0 +1,27 @@
+kind = "web"
+previewPath = "/"
+title = "Ecommerce Innovators"
+version = "1.0.0"
+id = "artifacts/ecommerce-innovators"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 18417
+
+[services.development]
+run = "pnpm --filter @workspace/ecommerce-innovators run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/ecommerce-innovators", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/ecommerce-innovators/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "18417"
+BASE_PATH = "/"
