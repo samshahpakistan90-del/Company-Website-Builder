@@ -14,7 +14,7 @@ const team = [
     role: "Brand Development Executive",
     desc: "Expert in brand positioning, identity, and long-term market strategy.",
     initials: "HN",
-    image: "https://i.postimg.cc/Yqm483Tx/Gemini-Generated-Image-sasj39sasj39sasj.jpg"
+    image: "https://i.postimg.cc/jqz7HvNw/Chat-GPT-Image-Jul-1-2026-05-46-54-AM.png"
   },
   {
     name: "Asad",
